@@ -57,6 +57,7 @@ function OldUser(){
     var errorCode = error.code;
     var errorMessage = error.message;
       alert(errorMessage);
+      document.write('You are not allowed to see this before the login!')
   });
 
 }
