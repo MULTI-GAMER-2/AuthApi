@@ -26,30 +26,19 @@ firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
     
     var user = userCredential.user;
     
- alert('Signed Up sucessfully, now you just need to verify your email!')
-    var AfterSignUpContainer = document.getElementById('AfterSignUpContainer')
-document.write(AfterSignUpContainer);
+ alert('Signed Up sucessfully')
+   
+    var AfterLoginContainer = document.getElementById('AfterLoginContainer');
 
   }).catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
     alert(errorMessage);
   });
-  EmailVerification();
+  
 }
 
-/*Send an email verification*/
 
-function EmailVerification(){
-
-    firebase.auth().currentUser.sendEmailVerification().then(() => {
-        
-        document.write(unescape('%3c%68%74%6d%6c%20%6c%61%6e%67%3d%22%65%6e%22%3e%0d%0a%3c%68%65%61%64%3e%0d%0a%20%20%20%20%3c%6d%65%74%61%20%63%68%61%72%73%65%74%3d%22%55%54%46%2d%38%22%3e%0d%0a%20%20%20%20%3c%6d%65%74%61%20%68%74%74%70%2d%65%71%75%69%76%3d%22%58%2d%55%41%2d%43%6f%6d%70%61%74%69%62%6c%65%22%20%63%6f%6e%74%65%6e%74%3d%22%49%45%3d%65%64%67%65%22%3e%0d%0a%20%20%20%20%3c%6d%65%74%61%20%6e%61%6d%65%3d%22%76%69%65%77%70%6f%72%74%22%20%63%6f%6e%74%65%6e%74%3d%22%77%69%64%74%68%3d%2c%20%69%6e%69%74%69%61%6c%2d%73%63%61%6c%65%3d%31%2e%30%22%3e%0d%0a%20%20%20%20%3c%74%69%74%6c%65%3e%45%6d%61%69%6c%20%56%65%72%69%66%69%63%61%74%69%6f%6e%20%57%61%73%20%53%75%63%65%73%73%66%75%6c%6c%79%20%73%65%6e%64%65%64%21%3c%2f%74%69%74%6c%65%3e%0d%0a%3c%2f%68%65%61%64%3e%0d%0a%3c%62%6f%64%79%3e%0d%0a%20%20%20%20%3c%63%65%6e%74%65%72%3e%0d%0a%20%20%20%20%3c%68%31%3e%56%65%72%69%66%69%63%61%74%69%6f%6e%20%65%6d%61%69%6c%20%77%61%73%20%73%75%63%65%73%73%66%75%6c%6c%79%20%73%65%6e%64%65%64%21%20%47%6f%20%74%6f%20%79%6f%75%72%20%65%6d%61%69%6c%20%74%6f%20%76%65%72%69%66%79%20%69%74%20%61%6e%64%20%72%65%6c%6f%61%64%20%74%68%69%73%20%63%6f%64%65%20%74%6f%20%6c%6f%67%69%6e%21%3c%2f%68%31%3e%0d%0a%20%20%20%20%3c%2f%63%65%6e%74%65%72%3e%0d%0a%3c%2f%62%6f%64%79%3e%0d%0a%3c%73%74%79%6c%65%3e%0d%0a%0d%0a%68%31%20%7b%0d%0a%0d%0a%0d%0a%66%6f%6e%74%2d%66%61%6d%69%6c%79%3a%20%27%43%6f%75%72%69%65%72%20%4e%65%77%27%2c%20%43%6f%75%72%69%65%72%2c%20%6d%6f%6e%6f%73%70%61%63%65%3b%0d%0a%74%65%78%74%2d%74%72%61%6e%73%66%6f%72%6d%3a%20%75%70%70%65%72%63%61%73%65%3b%0d%0a%6d%61%72%67%69%6e%2d%74%6f%70%3a%20%34%30%76%68%3b%0d%0a%63%6f%6c%6f%72%3a%20%23%66%66%66%3b%0d%0a%0d%0a%7d%0d%0a%0d%0a%68%74%6d%6c%7b%0d%0a%0d%0a%62%61%63%6b%67%72%6f%75%6e%64%3a%20%23%37%36%44%37%43%34%3b%0d%0a%0d%0a%0d%0a%7d%0d%0a%0d%0a%3c%2f%73%74%79%6c%65%3e%0d%0a%3c%2f%68%74%6d%6c%3e'));
-        
-        });
-    
-    }
-    
     
     /*If user is already registered*/
 
@@ -58,10 +47,8 @@ function OldUser(){
   firebase.auth().signInWithEmailAndPassword(VerifiedEmail.value, VerifiedPassword.value).then((userCredential) => {
     
     var user = userCredential.user;
-    
-    var AfterContainer = document.getElementById('AfterContainer');
-    
-    document.write(AfterContainer);
+      
+    )
     
   })
   .catch((error) => {
