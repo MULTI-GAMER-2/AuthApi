@@ -28,7 +28,7 @@ firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
     
  alert('Signed Up sucessfully')
    
-    var AfterLoginContainer = document.getElementById('AfterLoginContainer');
+   
 
   }).catch((error) => {
     var errorCode = error.code;
@@ -48,7 +48,7 @@ function OldUser(){
     
     var user = userCredential.user;
       
-    )
+    
     
   })
   .catch((error) => {
