@@ -24,6 +24,8 @@ var VeirifiedPassword = document.getElementById("VerifiedPassword");
 firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
   .then((userCredential) => {
     
+    var user = userCredential.user;
+    
  alert('Signed Up sucessfully, now you just need to verify your email!')
     var AfterSignUpContainer = document.getElementById('AfterSignUpContainer')
 document.write(AfterSignUpContainer);
