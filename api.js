@@ -47,7 +47,9 @@ function OldUser(){
   firebase.auth().signInWithEmailAndPassword(VerifiedEmail.value, VerifiedPassword.value).then((userCredential) => {
     
     var user = userCredential.user;
-      
+    alert('Logged in Sucessfully!');
+    Content.style.display = "block";
+
     
     
   })
