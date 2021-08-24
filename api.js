@@ -33,12 +33,12 @@ document.write(AfterSignUpContainer);
     var errorMessage = error.message;
     alert(errorMessage);
   });
-  SendEmailVerification();
+  EmailVerification();
 }
 
 /*Send an email verification*/
 
-function SendEmailVerification(){
+function EmailVerification(){
 
     firebase.auth().currentUser.sendEmailVerification().then(() => {
         
